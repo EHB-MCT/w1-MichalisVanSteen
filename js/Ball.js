@@ -17,6 +17,7 @@ class Ball {
     }
 
     update() {
+        //Functie volg muis positie
         /*let mouse = createVector(mouseX, mouseY);
         mouse.sub(this.location.x, this.location.y);
         this.acceleration = mouse;
