@@ -28,10 +28,10 @@ class Ball {
     }
 
     edges() {
-        if ((this.location.x > width) || this.location.x < 0)) {
+        if ((this.location.x > this.w) || (this.location.x < 0)) {
             this.velocity.x = this.velocity.x * -1;
           }
-          if ((this.location.y > height) || this.location.y < 0)) {
+          if ((this.location.y > this.h) || (this.location.y < 0)) {
             this.velocity.y = this.velocity.y * -1;
           }
     }

@@ -30,10 +30,10 @@ function draw() {
 }
 
 function edges() {
-    if ((location.x > width) || location.x < 0)) {
+    if ((location.x > w) || (location.x < 0)) {
       speed.x = speed.x * -1;
     }
-    if ((location.y > height) || location.y < 0)) {
+    if ((location.y > h) || (location.y < 0)) {
       speed.y = speed.y * -1;
     }
     
