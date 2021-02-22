@@ -20,7 +20,6 @@ function draw() {
 
     m.sub(center);
 
-    //Uitkomst Docent
     translate(w/2, h/2);
     line(0, 0, m.x, m.y);
 

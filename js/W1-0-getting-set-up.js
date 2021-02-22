@@ -6,63 +6,35 @@
 const w = 800;
 const h = 800;
 
-//let x = w/2;
-//let y = h/2;
-//let xSpeed = 5;
-//let ySpeed = 3;
-
-Vector location;
-Vector velocity;
-
-class PVector {
-  float x;
-  float y;
-
-  PVector(float x_, float y_) {
-    x = x_;
-    y = y_;
-  }
-
-  void add(PVector v) {
-    y = y + v.y;
-    x = x + v.x;
-  }
-
-}
+let loc, speed;
 
 function setup() {
     createCanvas(w, h);
     background(200);
 
-    location = PVector location = new PVector(100,100);
-    velocity = PVector velocity = new PVector(5,3);
+    loc = createVector(w/2, h/2);
+    speed = createVector(5, 1);
 }
 
 function draw() {
     background(200);
 
-    location.add(velocity);
-    
-
-    ellipse(location.x, location.y, 16, 16);
-
     //Update
     edges();
-    x += xSpeed;
-    y += ySpeed;
+    loc.add(speed);
 
     //Draw
     stroke(0);
     fill(175);
-    circle(location.x,location.y,50);
+    circle(loc.x, loc.y, 50);
 }
 
 function edges() {
     if ((location.x > width) || location.x < 0)) {
-      velocity.x = velocity.x * -1;
+      speed.x = speed.x * -1;
     }
     if ((location.y > height) || location.y < 0)) {
-      velocity.y = velocity.y * -1;
+      speed.y = speed.y * -1;
     }
     
 }

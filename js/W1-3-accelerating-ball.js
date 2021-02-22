@@ -6,12 +6,17 @@
 
 const w = 800;
 const h = 800;
+let ball;
 
 function setup() {
     createCanvas(w, h);
     background(200);
+    ball = new Ball(w/2, h/2, w, h);
 }
 
 function draw() {
     background(200);
+
+    ball.update();
+    ball.draw();
 }
