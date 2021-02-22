@@ -6,10 +6,10 @@
 const w = 800;
 const h = 800;
 
-let x = w/2;
-let y = h/2;
-let xSpeed = 5;
-let ySpeed = 3;
+//let x = w/2;
+//let y = h/2;
+//let xSpeed = 5;
+//let ySpeed = 3;
 
 Vector location;
 Vector velocity;
@@ -42,12 +42,7 @@ function draw() {
     background(200);
 
     location.add(velocity);
-    if ((location.x > width) || location.x < 0)) {
-      velocity.x = velocity.x * -1;
-    }
-    if ((location.y > height) || location.y < 0)) {
-      velocity.y = velocity.y * -1;
-    }
+    
 
     ellipse(location.x, location.y, 16, 16);
 
@@ -59,15 +54,15 @@ function draw() {
     //Draw
     stroke(0);
     fill(175);
-    circle(x,y,50);
+    circle(location.x,location.y,50);
 }
 
 function edges() {
-    if ((x > w) || (x < 0)) {
-        xSpeed = xSpeed * -1;
-      }
-      if ((y > h) || (y < 0)) {
-        ySpeed = ySpeed * -1;
-      }
+    if ((location.x > width) || location.x < 0)) {
+      velocity.x = velocity.x * -1;
+    }
+    if ((location.y > height) || location.y < 0)) {
+      velocity.y = velocity.y * -1;
+    }
     
 }
