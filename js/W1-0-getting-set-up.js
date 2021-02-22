@@ -12,7 +12,7 @@ let xSpeed = 5;
 let ySpeed = 3;
 
 Vector location;
-Vector speed;
+Vector velocity;
 
 class PVector {
   float x;
@@ -30,18 +30,26 @@ class PVector {
 
 }
 
-PVector location = new PVector(100,100);
-PVector velocity = new PVector(1,3.3);
-
-location.add(velocity);
-
 function setup() {
     createCanvas(w, h);
     background(200);
+
+    location = PVector location = new PVector(100,100);
+    velocity = PVector velocity = new PVector(5,3);
 }
 
 function draw() {
     background(200);
+
+    location.add(velocity);
+    if ((location.x > width) || location.x < 0)) {
+      velocity.x = velocity.x * -1;
+    }
+    if ((location.y > height) || location.y < 0)) {
+      velocity.y = velocity.y * -1;
+    }
+
+    ellipse(location.x, location.y, 16, 16);
 
     //Update
     edges();
